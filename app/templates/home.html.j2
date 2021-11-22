@@ -20,7 +20,52 @@
     <link rel="stylesheet" href="/static/css/templates/home.css" />
 {% endblock %}
 {% block main %}
-<main class="portada">
-    <h1>Hello World!</h1>
+<main class="contact">
+    <div class="card-body">
+        <div class="contact_title card-title">
+            <h3>Entrenamiento:</h3>
+        </div>
+
+        {% for message in get_flashed_messages() %}
+            {% if message == "Mensaje enviado a Telegram" %}
+            <div class="alert alert-success" role="alert">{{ message }}</div>
+            {% else %}
+            <div class="alert alert-danger" role="alert">{{ message }}</div>
+            {% endif %}
+        {% endfor %}
+
+        <form action="{{ url_for('home_page') }}" method=post class="contact_form">
+            {{ form.hidden_tag() }}
+
+            <div class="mb-3">
+            {{ form.id_telegram.label }}
+            {{ form.id_telegram }}
+            </div>
+
+            <div class="mb-3">
+            {{ form.name.label }}
+            {{ form.name }}
+            </div>
+
+            <div class="mb-3">
+            {{ form.weight.label }}
+            {{ form.weight }}
+            </div>
+
+            <div class="mb-3">
+            {{ form.repetitions.label }}
+            {{ form.repetitions }}
+            </div>
+
+            <div class="mb-3">
+            {{ form.date.label }}
+            {{ form.date }}
+            </div>
+
+            <div class="contact_button">
+            {{ form.submit }}
+            </div>
+        </form>
+    </div>
 </main>
 {% endblock %}
