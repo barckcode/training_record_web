@@ -2,33 +2,25 @@
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    background: #ffffff;
-    box-shadow:  5px 5px 15px #d4d4d4,
-             -5px -5px 15px #ffffff;
+    background: #fff;
+    box-shadow:  5px 5px 15px #086972,
+             -5px -5px 15px #fff;
 }
 
 .navbar {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
-    background-color: #2c012e;
-}
-
-.navbar-nav span {
-    padding: 0 .5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
+    background-color: #086972;
+}
+
+.navbar-brand {
+    color: #FBFD8A;
 }
 
 #footer {
     padding: 1rem;
-}
-
-/* Media Queries */
-@media (max-width: 1024px) {
-    .navbar-nav span {
-        display: none;
-    }
 }
