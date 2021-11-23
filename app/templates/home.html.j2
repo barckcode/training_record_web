@@ -20,9 +20,9 @@
     <link rel="stylesheet" href="/static/css/templates/home.css" />
 {% endblock %}
 {% block main %}
-<main class="contact">
+<main class="training">
     <div class="card-body">
-        <div class="contact_title card-title">
+        <div class="training_title card-title">
             <h3>Entrenamiento:</h3>
         </div>
 
@@ -34,35 +34,130 @@
             {% endif %}
         {% endfor %}
 
-        <form action="{{ url_for('home_page') }}" method=post class="contact_form">
-            {{ form.hidden_tag() }}
+        <form action="{{ url_for('home_page') }}" method=post class="training_form">
+                {{ form.hidden_tag() }}
 
-            <div class="mb-3">
-            {{ form.id_telegram.label }}
-            {{ form.id_telegram }}
+            <div class="training_firsts_inputs">
+                <div>
+                    {{ form.id_telegram.label }}
+                    <div class="training_form_sections mb-3">
+                    {{ form.id_telegram }}
+                    </div>
+                </div>
+
+                <div>
+                    {{ form.name.label }}
+                    <div class="training_form_sections mb-3">
+                    {{ form.name }}
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-3">
-            {{ form.name.label }}
-            {{ form.name }}
+            <div class="training_form_series card">
+                <h5 class="card-title">Series</h5>
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div>
+                        {{ form.weight.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.weight }}
+                        </div>
+                    </div>
+
+                    <div>
+                        {{ form.repetitions.label }}
+                        <div class="training_form_sections mb-3">
+                        {{ form.repetitions }}
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="mb-3">
-            {{ form.weight.label }}
-            {{ form.weight }}
-            </div>
-
-            <div class="mb-3">
-            {{ form.repetitions.label }}
-            {{ form.repetitions }}
-            </div>
-
-            <div class="mb-3">
             {{ form.date.label }}
+            <div class="training_form_sections mb-3">
             {{ form.date }}
             </div>
 
-            <div class="contact_button">
+            <div class="training_button">
             {{ form.submit }}
             </div>
         </form>
