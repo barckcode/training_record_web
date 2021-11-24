@@ -21,11 +21,29 @@ def home_page():
         # else:
         id_telegram = str(form.id_telegram.data)
         name = str(form.name.data)
-        weight = str(form.weight.data)
-        repetitions = str(form.repetitions.data)
+        weight_01 = str(form.weight_01.data)
+        repetitions_01 = str(form.repetitions_01.data)
+        weight_02 = str(form.weight_02.data)
+        repetitions_02 = str(form.repetitions_02.data)
+        weight_03 = str(form.weight_03.data)
+        repetitions_03 = str(form.repetitions_03.data)
+        weight_04 = str(form.weight_04.data)
+        repetitions_04 = str(form.repetitions_04.data)
         date = str(form.date.data)
 
-        resp = send_message(id_telegram, name, weight, repetitions, date)
+        resp = send_message(
+            id_telegram,
+            name,
+            weight_01,
+            weight_02,
+            weight_03,
+            weight_04,
+            repetitions_01,
+            repetitions_02,
+            repetitions_03,
+            repetitions_04,
+            date
+        )
         flash(resp)
         return render_template('home.html.j2', form=form)
 
